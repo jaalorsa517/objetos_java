@@ -8,7 +8,7 @@ public class Principal {
         int numero = 0;
         int tipo = 0;
         double tarifa = 0.0;
-        System.out.println("Bienvenido al programa para crear tu cita");
+        System.out.println("Crear tu cita");
         System.out.println("Ingrese el número de la cita: ");
         numero = ingreso.nextInt();
         System.out.println("Ingrese el tipo de cita. 1,2,3,4,5");

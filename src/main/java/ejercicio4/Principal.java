@@ -4,17 +4,17 @@ import java.util.Random;
 
 public class Principal {
     public static void main(String[] args) {
-        Banco banco = new Banco("Nacional");
-        for (int i = 0; i < 70; i++){
+        Banco banco = new Banco("Principal");
+        for (int i = 0; i < 50; i++){
             if (i%2==0){
-                banco.adCliente(new Persona("12345"+String.valueOf(i),
-                        "Fulano" + String.valueOf(i),
+                banco.adCliente(new Persona("246"+String.valueOf(i),
+                        "Peronin" + String.valueOf(i),
                         new Random().nextInt(60)));
             }
             else{
-                banco.adCliente(new Empresa("9876" + String.valueOf(i),
+                banco.adCliente(new Empresa("135" + String.valueOf(i),
                         "Empresa"+String.valueOf(i),
-                        "Perano"+ String.valueOf(i)));
+                        "Luffy"+ String.valueOf(i)));
             }
         }
         /************************************************************/

@@ -36,11 +36,13 @@ public class Cuenta {
 
     public double getCapacidadCredito(){
         double capacidad = 0;
-        if (this.tipo.equals("ahorro")){
-            capacidad = this.saldoActual - this.saldoMinimo;
-        }
-        else if (this.tipo.equals("crédito")){
-            capacidad = this.saldoActual*3;
+        switch (this.tipo){
+            case "ahorro":
+                capacidad = this.saldoActual - this.saldoMinimo;
+                break;
+            case "crédito":
+                capacidad = this.saldoActual*3;
+                break;
         }
         return capacidad;
     }

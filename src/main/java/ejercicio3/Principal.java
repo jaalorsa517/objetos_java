@@ -3,14 +3,14 @@ package ejercicio3;
 public class Principal {
     public static void main(String[] args) {
         System.out.println("CUENTA AHORRO");
-        Cuenta cuentaAhorro = new Cuenta(1234,"ahorro",500);
+        Cuenta cuentaAhorro = new Cuenta(5431,"ahorro",2000);
         System.out.println("Su saldo es: " + cuentaAhorro.getSaldo() + " y su saldo minimo es: " + cuentaAhorro.getSaldoMinimo());
+        System.out.println("Su capacidad de crédito es: " + cuentaAhorro.getCapacidadCredito() );
         cuentaAhorro.consignar(200);
         System.out.println("Se consigno 200 y su nuevo saldo es: " + cuentaAhorro.getSaldo());
-        System.out.println("Se intenta retirar 690");
-        cuentaAhorro.retirar(690);
+        System.out.println("Se intenta retirar 2200");
+        cuentaAhorro.retirar(2200);
         System.out.println("Fondos insuficientes, se retiro lo que se pudo. Su nuevo saldo es: " + cuentaAhorro.getSaldo());
-        System.out.println("Su capacidad de crédito es: " + cuentaAhorro.getCapacidadCredito() + "\n");
 
 
         System.out.println("CUENTA CREDITO");

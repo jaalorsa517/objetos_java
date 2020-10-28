@@ -19,11 +19,13 @@ public class Cita {
 
     public String getTipo(){
         String tipo = "";
-        if (this.tipo == 1 || this.tipo == 2 || this.tipo == 3){
-            tipo = "general";
-        }
-        else if (this.tipo == 4 || this.tipo == 5){
-            tipo = "especialista";
+        switch (this.tipo){
+            case 1 | 2 | 3:
+                tipo = "general";
+                break;
+            case 4 | 5:
+                tipo = "especialista";
+                break;
         }
         return tipo;
     }
@@ -34,11 +36,13 @@ public class Cita {
 
     public double calcularValorFinal(){
         String tipo = this.getTipo();
-        if (tipo.equals("especialista")) {
-            this.valorFinal = this.tarifa * (1+0.5);
-        }
-        else if (tipo.equals("general")) {
-            this.valorFinal = this.tarifa -(this.tarifa * (0.5)) ;
+        switch (tipo){
+            case "especialista":
+                this.valorFinal = this.tarifa * (1+0.5);
+                break;
+            case "general":
+                this.valorFinal = this.tarifa -(this.tarifa * (0.5)) ;
+                break;
         }
         return this.valorFinal;
     }

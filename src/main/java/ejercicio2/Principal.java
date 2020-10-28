@@ -2,7 +2,7 @@ package ejercicio2;
 
 public class Principal {
     public static void main(String[] args) {
-        Bus bus = new Bus("TOE 391",3, 20);
+        Bus bus = new Bus("ARG 521",3, 20);
         System.out.println("La placa es: " + bus.getPlaca());
         System.out.println("La capacidad total del bus es: " + String.valueOf(bus.getCapacidad()));
         System.out.println("El precio del pasaje es: " + String.valueOf(bus.getPreciosPasaje()));
